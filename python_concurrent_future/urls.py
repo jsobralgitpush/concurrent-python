@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from python_concurrent import views
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('synchronous/', views.synchronous_view, name='synchronous'),
+    path('concurrent/', views.concurrent_view, name='concurrent'),
 ]

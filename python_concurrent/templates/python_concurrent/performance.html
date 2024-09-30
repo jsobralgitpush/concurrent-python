@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ method }} Processing Results</title>
+</head>
+<body>
+    <h1>{{ method }} Processing</h1>
+    <p>Execution Time: {{ execution_time }} seconds</p>
+    <h2>Results:</h2>
+    <ul>
+        {% for result in results %}
+            <li>{{ result }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'synchronous' %}">Test Synchronous Processing</a> | 
+    <a href="{% url 'concurrent' %}">Test Concurrent Processing</a>
+</body>
+</html>
